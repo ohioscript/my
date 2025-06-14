@@ -41,7 +41,7 @@ fi
 }
 
 sewa() {
-PERMISSION
+#PERMISSION
 echo -e "\033[0;34m------------------------------------\033[0m"
 echo -e "\E[44;1;39m        Installation DNS Server     \E[0m"
 echo -e "\033[0;34m------------------------------------\033[0m"
@@ -102,7 +102,7 @@ reboot
 
 
 main_dnslegasi() {
-PERMISSION
+#PERMISSION
 echo -e "\033[0;34m------------------------------------\033[0m"
 echo -e "\E[44;1;39m        Installation DNS Server     \E[0m"
 echo -e "\033[0;34m------------------------------------\033[0m"
