@@ -26,7 +26,7 @@ echo "Checking VPS"
 clear
 
 PERMISSION() {
-IZIN=$( curl -sS http://${host}/${owner}/ip-admin/main/access | awk '{print $2}' | grep $MYIP )
+IZIN=$( curl -sS http://${host}/${owner}/ip-admin/main/access | awk '{print $4}' | grep $MYIP )
 MYIP=$(wget -qO- ipinfo.io/ip)
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
