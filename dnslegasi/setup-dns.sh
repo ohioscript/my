@@ -48,17 +48,17 @@ mkdir -p /opt/dnslegasi
 mkdir -p dnslegasi
 cd dnslegasi
 rm -rf domains  > /dev/null 2>&1
-curl "http://${host}/ohioscript/main/dnslegasi/sewa-proxy-domains.txt" >> domains
-wget "http://${host}/ohioscript/main/dnslegasi/dnslegasi"
-wget "http://${host}/ohioscript/main/dnslegasi/dnsmasq.sh"
-wget "http://${host}/ohioscript/main/dnslegasi/sniproxy.sh"
-wget "http://${host}/ohioscript/main/dnslegasi/my_init"
-wget "http://${host}/ohioscript/main/dnslegasi/services.ini"
-wget "http://${host}/ohioscript/main/dnslegasi/Dockerfile"
-wget "http://${host}/ohioscript/main/dnslegasi/instl"
-wget -O /usr/bin/speedtest "http://${host}/ohioscript/main/dnslegasi/speedtest_cli.py" && chmod +x /usr/bin/speedtest
-wget -O /usr/bin/xp-dns "http://${host}/ohioscript/main/dnslegasi/sewa-xp-dns.sh" && chmod +x /usr/bin/xp-dns
-wget -O /usr/bin/menu http://${host}/ohioscript/main/dnslegasi/sewa-menu.sh && chmod +x /usr/bin/menu
+curl "http://${host}/ohioscript/my/main/dnslegasi/sewa-proxy-domains.txt" >> domains
+wget "http://${host}/ohioscript/my/main/dnslegasi/dnslegasi"
+wget "http://${host}/ohioscript/my/main/dnslegasi/dnsmasq.sh"
+wget "http://${host}/ohioscript/my/main/dnslegasi/sniproxy.sh"
+wget "http://${host}/ohioscript/my/main/dnslegasi/my_init"
+wget "http://${host}/ohioscript/my/main/dnslegasi/services.ini"
+wget "http://${host}/ohioscript/my/main/dnslegasi/Dockerfile"
+wget "http://${host}/ohioscript/my/main/dnslegasi/instl"
+wget -O /usr/bin/speedtest "http://${host}/ohioscript/my/main/dnslegasi/speedtest_cli.py" && chmod +x /usr/bin/speedtest
+wget -O /usr/bin/xp-dns "http://${host}/ohioscript/my/main/dnslegasi/sewa-xp-dns.sh" && chmod +x /usr/bin/xp-dns
+wget -O /usr/bin/menu http://${host}/ohioscript/my/main/dnslegasi/sewa-menu.sh && chmod +x /usr/bin/menu
 apt install jq -y && wget -O /usr/bin/menu_nf http://${host}/public/netflixchecker/menu_nf.sh && chmod +x /usr/bin/menu_nf
 apt install snapd -y
 snap install fast
@@ -109,17 +109,17 @@ mkdir -p /opt/dnslegasi
 mkdir -p dnslegasi
 cd dnslegasi
 rm -rf domains  > /dev/null 2>&1
-curl "http://${host}/ohioscript/main/dnslegasi/main-proxy-domains.txt" >> domains
-wget "http://${host}/ohioscript/main/dnslegasi/dnslegasi"
-wget "http://${host}/ohioscript/main/dnslegasi/dnsmasq.sh"
-wget "http://${host}/ohioscript/main/dnslegasi/sniproxy.sh"
-wget "http://${host}/ohioscript/main/dnslegasi/my_init"
-wget "http://${host}/ohioscript/main/dnslegasi/services.ini"
-wget "http://${host}/ohioscript/main/dnslegasi/Dockerfile"
-wget "http://${host}/ohioscript/main/dnslegasi/instl"
-wget -O /usr/bin/speedtest "http://${host}/ohioscript/main/dnslegasi/speedtest_cli.py" && chmod +x /usr/bin/speedtest
-wget -O /usr/bin/xp-dns "http://${host}/ohioscript/main/dnslegasi/main-xp-dns.sh" && chmod +x /usr/bin/xp-dns
-wget -O /usr/bin/menu http://${host}/ohioscript/main/dnslegasi/main-menu.sh && chmod +x /usr/bin/menu
+curl "http://${host}/ohioscript/my/main/dnslegasi/main-proxy-domains.txt" >> domains
+wget "http://${host}/ohioscript/my/main/dnslegasi/dnslegasi"
+wget "http://${host}/ohioscript/my/main/dnslegasi/dnsmasq.sh"
+wget "http://${host}/ohioscript/my/main/dnslegasi/sniproxy.sh"
+wget "http://${host}/ohioscript/my/main/dnslegasi/my_init"
+wget "http://${host}/ohioscript/my/main/dnslegasi/services.ini"
+wget "http://${host}/ohioscript/my/main/dnslegasi/Dockerfile"
+wget "http://${host}/ohioscript/my/main/dnslegasi/instl"
+wget -O /usr/bin/speedtest "http://${host}/ohioscript/my/main/dnslegasi/speedtest_cli.py" && chmod +x /usr/bin/speedtest
+wget -O /usr/bin/xp-dns "http://${host}/ohioscript/my/main/dnslegasi/main-xp-dns.sh" && chmod +x /usr/bin/xp-dns
+wget -O /usr/bin/menu http://${host}/ohioscript/my/main/dnslegasi/main-menu.sh && chmod +x /usr/bin/menu
 apt install jq -y && wget -O /usr/bin/menu_nf http://${host}/public/netflixchecker/menu_nf.sh && chmod +x /usr/bin/menu_nf
 apt install snapd -y
 snap install fast
