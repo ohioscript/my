@@ -19,13 +19,14 @@ ORANGE='\033[0;33m'
 CYAN='\e[36m'
 LIGHT='\033[0;37m'
 host="https://raw.githubusercontent.com"
+owner="vpnlegasi"
 directory="public/netflixchecker"
 MYIP=$(wget -qO- ipinfo.io/ip)
 echo "Checking VPS"
 clear
 
 PERMISSION() {
-IZIN=$( curl -sS http://${host}/ipaccess/ip-admin | awk '{print $2}' | grep $MYIP )
+IZIN=$( curl -sS http://${host}/${owner}/ip-admin/main/access | awk '{print $2}' | grep $MYIP )
 MYIP=$(wget -qO- ipinfo.io/ip)
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
