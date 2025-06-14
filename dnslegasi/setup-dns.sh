@@ -26,7 +26,7 @@ echo "Checking VPS"
 clear
 
 PERMISSION() {
-IZIN=$( curl -sS http://${host}/${owner}/ip-admin/main/access | awk '{print $4}' | grep $MYIP )
+IZIN=$( curl -sS ${host}/${owner}/ip-admin/main/access | awk '{print $4}' | grep $MYIP )
 MYIP=$(curl -s https://icanhazip.com)
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
@@ -49,18 +49,18 @@ mkdir -p /opt/dnslegasi
 mkdir -p dnslegasi
 cd dnslegasi
 rm -rf domains  > /dev/null 2>&1
-curl "http://${host}/ohioscript/my/main/dnslegasi/sewa-proxy-domains.txt" >> domains
-wget "http://${host}/ohioscript/my/main/dnslegasi/dnslegasi"
-wget "http://${host}/ohioscript/my/main/dnslegasi/dnsmasq.sh"
-wget "http://${host}/ohioscript/my/main/dnslegasi/sniproxy.sh"
-wget "http://${host}/ohioscript/my/main/dnslegasi/my_init"
-wget "http://${host}/ohioscript/my/main/dnslegasi/services.ini"
-wget "http://${host}/ohioscript/my/main/dnslegasi/Dockerfile"
-wget "http://${host}/ohioscript/my/main/dnslegasi/instl"
-wget -O /usr/bin/speedtest "http://${host}/ohioscript/my/main/dnslegasi/speedtest_cli.py" && chmod +x /usr/bin/speedtest
-wget -O /usr/bin/xp-dns "http://${host}/ohioscript/my/main/dnslegasi/sewa-xp-dns.sh" && chmod +x /usr/bin/xp-dns
-wget -O /usr/bin/menu http://${host}/ohioscript/my/main/dnslegasi/sewa-menu.sh && chmod +x /usr/bin/menu
-apt install jq -y && wget -O /usr/bin/menu_nf http://${host}/public/netflixchecker/menu_nf.sh && chmod +x /usr/bin/menu_nf
+curl "${host}/ohioscript/my/main/dnslegasi/sewa-proxy-domains.txt" >> domains
+wget "${host}/ohioscript/my/main/dnslegasi/dnslegasi"
+wget "${host}/ohioscript/my/main/dnslegasi/dnsmasq.sh"
+wget "${host}/ohioscript/my/main/dnslegasi/sniproxy.sh"
+wget "${host}/ohioscript/my/main/dnslegasi/my_init"
+wget "${host}/ohioscript/my/main/dnslegasi/services.ini"
+wget "${host}/ohioscript/my/main/dnslegasi/Dockerfile"
+wget "${host}/ohioscript/my/main/dnslegasi/instl"
+wget -O /usr/bin/speedtest "${host}/ohioscript/my/main/dnslegasi/speedtest_cli.py" && chmod +x /usr/bin/speedtest
+wget -O /usr/bin/xp-dns "${host}/ohioscript/my/main/dnslegasi/sewa-xp-dns.sh" && chmod +x /usr/bin/xp-dns
+wget -O /usr/bin/menu ${host}/ohioscript/my/main/dnslegasi/sewa-menu.sh && chmod +x /usr/bin/menu
+apt install jq -y && wget -O /usr/bin/menu_nf ${host}/${owner}/public/netflixchecker/menu_nf.sh && chmod +x /usr/bin/menu_nf
 apt install snapd -y
 snap install fast
 curl -sSL https://get.docker.com/ | sudo sh
@@ -110,18 +110,18 @@ mkdir -p /opt/dnslegasi
 mkdir -p dnslegasi
 cd dnslegasi
 rm -rf domains  > /dev/null 2>&1
-curl "http://${host}/ohioscript/my/main/dnslegasi/main-proxy-domains.txt" >> domains
-wget "http://${host}/ohioscript/my/main/dnslegasi/dnslegasi"
-wget "http://${host}/ohioscript/my/main/dnslegasi/dnsmasq.sh"
-wget "http://${host}/ohioscript/my/main/dnslegasi/sniproxy.sh"
-wget "http://${host}/ohioscript/my/main/dnslegasi/my_init"
-wget "http://${host}/ohioscript/my/main/dnslegasi/services.ini"
-wget "http://${host}/ohioscript/my/main/dnslegasi/Dockerfile"
-wget "http://${host}/ohioscript/my/main/dnslegasi/instl"
-wget -O /usr/bin/speedtest "http://${host}/ohioscript/my/main/dnslegasi/speedtest_cli.py" && chmod +x /usr/bin/speedtest
-wget -O /usr/bin/xp-dns "http://${host}/ohioscript/my/main/dnslegasi/main-xp-dns.sh" && chmod +x /usr/bin/xp-dns
-wget -O /usr/bin/menu http://${host}/ohioscript/my/main/dnslegasi/main-menu.sh && chmod +x /usr/bin/menu
-apt install jq -y && wget -O /usr/bin/menu_nf http://${host}/public/netflixchecker/menu_nf.sh && chmod +x /usr/bin/menu_nf
+curl "${host}/ohioscript/my/main/dnslegasi/main-proxy-domains.txt" >> domains
+wget "${host}/ohioscript/my/main/dnslegasi/dnslegasi"
+wget "${host}/ohioscript/my/main/dnslegasi/dnsmasq.sh"
+wget "${host}/ohioscript/my/main/dnslegasi/sniproxy.sh"
+wget "${host}/ohioscript/my/main/dnslegasi/my_init"
+wget "${host}/ohioscript/my/main/dnslegasi/services.ini"
+wget "${host}/ohioscript/my/main/dnslegasi/Dockerfile"
+wget "${host}/ohioscript/my/main/dnslegasi/instl"
+wget -O /usr/bin/speedtest "${host}/ohioscript/my/main/dnslegasi/speedtest_cli.py" && chmod +x /usr/bin/speedtest
+wget -O /usr/bin/xp-dns "${host}/ohioscript/my/main/dnslegasi/main-xp-dns.sh" && chmod +x /usr/bin/xp-dns
+wget -O /usr/bin/menu ${host}/ohioscript/my/main/dnslegasi/main-menu.sh && chmod +x /usr/bin/menu
+apt install jq -y && wget -O /usr/bin/menu_nf ${host}/${owner}/public/netflixchecker/menu_nf.sh && chmod +x /usr/bin/menu_nf
 apt install snapd -y
 snap install fast
 curl -sSL https://get.docker.com/ | sudo sh
